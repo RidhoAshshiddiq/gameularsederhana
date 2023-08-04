@@ -27,10 +27,10 @@ class Ular {
         }
     }
 
-    rubahArah (x,y) {
-        if(this.arah.x!==-x && this.arah.y!==-y) {
-            this.arah.x=x;
-            this.arah.y=y;
+    rubahArah (x, y) {
+        if( this.arah.x !== -x && this.arah.y !== -y) {
+            this.arah.x = x;
+            this.arah.y = y;
         }
     }
 }
@@ -39,26 +39,27 @@ const cvs = document.getElementById("ular");
 const context = cvs.getContext("2d");
 const ukuranKotak = 20;
 const ular = new Ular();
+
 document.addEventListener("keydown", (event) => {
     switch (event.key){
         case "ArrowUp":
         console.log("panahatas");
-        ular.rubahArah(0,-1);
+        ular.rubahArah(0, -1);
         break;
 
         case "ArrowDown":
         console.log("panahbawah");
-        ular.rubahArah(0,1);
+        ular.rubahArah(0, 1);
         break;
 
         case "ArrowLeft":
         console.log("panahkiri");
-        ular.rubahArah(-1,0);
+        ular.rubahArah(-1, 0);
         break;
 
         case "ArrowRight":
         console.log("panahkanan");
-        ular.rubahArah(1,0);
+        ular.rubahArah(1, 0);
         break;
     } 
 });
@@ -78,11 +79,9 @@ function gambarUlar() {
 }
 
 function gambarMakananUlar() {
-    context.fillStyle = "#f00";
+    context.fillStyle = "red";
     context.fillRect(ular.makanan.x * ukuranKotak, ular.makanan.y * ukuranKotak, ukuranKotak, ukuranKotak)
 }
 
-function coba() {
-    console.log(ular.makanan.x);
-}
-setInterval(gambar, 1000)
+
+setInterval (gambar, 200);
