@@ -1,13 +1,13 @@
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height:100vh;
-    margin:0;
+body h1 {
+
+    /* padding-left:700px; */
+    padding-top:100px;
+    text-align: center;
 }
 
-canvas {
+body canvas {
     border: 1px solid black;
-    height: 400px;
-    width: 400px;
+    display: flex;
+    height:50vh;
+    margin-left: 570px;
 }
